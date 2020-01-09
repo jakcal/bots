@@ -15,6 +15,7 @@ bot.onText(/\/anime (.+)/, (msg, match) => {
       resp.on('end', () => {
       var datas = JSON.parse(data);
       var i;
+          bot.sendMessage(msg.chat.id, "أخر 10 حلقات مضافة");
       for (i = 0; i < 10; i++) {
           var photo = datas[i].image;
           $url = "snoanime.com/info.php?id="+datas[i].id+"&image="+datas[i].image+"&name="+datas[i].name+"&year="+datas[i].year+"&status="+datas[i].status;

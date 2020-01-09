@@ -21,7 +21,7 @@ bot.onText(/\/anime (.+)/, (msg, match) => {
           $telegramMessage = 
          '<strong> ألاسم : </strong> '+datas[i].name+' \n'+
          '<strong> الحلقة : </strong> '+datas[i].epName+' \n';
-          bot.sendPhoto(id.chat.id, photo, {caption: $telegramMessage ,parse_mode: 'HTML'})
+          bot.sendPhoto(msg.chat.id, photo, {caption: $telegramMessage ,parse_mode: 'HTML'})
          }
        });
       }).on("error", (err) => {
